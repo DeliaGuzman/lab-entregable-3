@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>entregable 3</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		
+		function sumar (a,b){
+			return (a+b);
+		}
+		function restar (a,b){
+			return (a-b);
+		}
+		function multi (a,b){
+			return (a*b);
+		}
+		function divi (a,b){
+			return (a/b);
+		}
+		 //funcion calculadora 
+        function calculadora(n1,n2,oper){
+            switch(operacion){
+                case 'sumar':
+                    return sumar(n1,n2);
+                case 'restar':
+                    return restar(n1,n2);
+                case 'multi':
+                    return multi(n1,n2);
+                case 'divi':
+                    if (n2 == 0){
+                    	return "Operacion no valida (division por cero)"
+                    }else {
+                	return divi(n1,n2);
+                	};
+
+                default:
+                    return "Operación no valida...";
+            }
+        }
+
+		let numero1 =parseFloat(prompt("Ingrese el primer numero: "));
+		let numero2 =parseFloat(prompt("ingrese el segundo numero: "));
+		let operacion;
+		let resultado;
+
+
+
+		 while (operacion != "salir") {
+		 	operacion = prompt("ingrese la operacion (sumar, restar, multi, divi o salir para terminar)");
+		 	if (operacion === "salir"){
+		 		break;
+		 	}
+				
+		 		
+		 	resultado = calculadora(numero1, numero2, operacion);
+		 	console.log(resultado);	
+		 }
+		
+		 console.log ("Final de las operaciones")
+	</script>
+
+</body>
+</html>
